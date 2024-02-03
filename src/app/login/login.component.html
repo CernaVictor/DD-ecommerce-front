@@ -1,0 +1,38 @@
+<form (ngSubmit)="onLogin()">
+  <h1>Login</h1>
+
+  <div class="form-control">
+    <label for="email">Email</label>
+    <input id="email" [(ngModel)]="user.email" type="email" name="email" />
+    <mat-hint
+      class="hint-style"
+      style="color: red"
+      *ngIf="user.email?.length === 0"
+      >Email is required</mat-hint
+    >
+  </div>
+
+  <div class="form-control">
+    <label for="password">Password</label>
+    <input
+      id="password"
+      [(ngModel)]="user.password"
+      type="password"
+      name="password"
+    />
+    <mat-hint
+      class="hint-style"
+      style="color: red"
+      *ngIf="user.password?.length === 0"
+      >Password is required</mat-hint
+    >
+  </div>
+  <a class="redirect" href="/register">
+    <h6 class="text-center">Sign up here!</h6>
+  </a>
+  <br />
+  <a class="redirect" href="/forgot-password">
+    <h6 class="text-center">Forgot password?</h6>
+  </a>
+  <button type="submit">Login &#8594;</button>
+</form>

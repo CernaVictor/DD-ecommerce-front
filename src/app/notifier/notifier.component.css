@@ -1,0 +1,18 @@
+.Success {
+  background: rgb(65, 252, 134);
+  color: white;
+}
+.Success button {
+  background-color: rgb(65, 252, 134);
+  color: white;
+  border: none;
+}
+.Error {
+  background: #f44336;
+  color: white;
+}
+.Error button {
+  background-color: #f44336;
+  color: white !important;
+  border: none;
+}

@@ -1,0 +1,282 @@
+<form (ngSubmit)="onRegister()">
+  <h1>Register</h1>
+
+  <mat-stepper orientation="vertical">
+    <mat-step label="Personal information">
+      <div class="form-control">
+        <label for="firstName">First name</label>
+        <input
+          id="firstName"
+          [(ngModel)]="registerDTO.user.firstName"
+          type="text"
+          name="firstName"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.user.firstName?.length === 0"
+          >First name is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="lastName">Last name</label>
+        <input
+          [(ngModel)]="registerDTO.user.lastName"
+          id="lastName"
+          type="text"
+          name="lastName"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.user.lastName?.length === 0"
+          >Last name is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          [(ngModel)]="registerDTO.user.email"
+          type="email"
+          name="email"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.user.email?.length === 0"
+          >Email is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          [(ngModel)]="registerDTO.user.password"
+          type="password"
+          name="password"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.user.password?.length === 0"
+          >Password is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="phoneNumber">Phone number</label>
+        <input
+          id="phoneNumber"
+          [(ngModel)]="registerDTO.user.phoneNumber"
+          type="text"
+          name="phoneNumber"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.user.phoneNumber?.length === 0"
+          >Phone number is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <mat-checkbox
+          id="isAdmin"
+          [(ngModel)]="registerDTO.user.isAdmin"
+          name="isAdmin"
+          [color]=""
+          >Are you an admin?</mat-checkbox
+        >
+      </div>
+    </mat-step>
+
+    <mat-step label="Delivery address information">
+      <div class="form-control">
+        <label for="streetName">Street name</label>
+        <input
+          [(ngModel)]="registerDTO.deliveryAddress.streetName"
+          id="streetName"
+          type="text"
+          name="streetName"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.deliveryAddress.streetName?.length === 0"
+          >Street name is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="propertyNumber">Property number</label>
+        <input
+          [(ngModel)]="registerDTO.deliveryAddress.propertyNumber"
+          id="propertyNumber"
+          type="text"
+          name="propertyNumber"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.deliveryAddress.propertyNumber?.length === 0"
+          >Property number is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="streetName">Postal code</label>
+        <input
+          [(ngModel)]="registerDTO.deliveryAddress.postalCode"
+          id="postalCode"
+          type="text"
+          name="postalCode"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.deliveryAddress.postalCode?.length === 0"
+          >Postal code is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="streetName">Country</label>
+        <input
+          [(ngModel)]="registerDTO.deliveryAddress.country"
+          id="country"
+          type="text"
+          name="country"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.deliveryAddress.country?.length === 0"
+          >Country is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="streetName">County</label>
+        <input
+          [(ngModel)]="registerDTO.deliveryAddress.county"
+          id="county"
+          type="text"
+          name="county"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.deliveryAddress.county?.length === 0"
+          >County is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="streetName">City</label>
+        <input
+          [(ngModel)]="registerDTO.deliveryAddress.city"
+          id="city"
+          type="text"
+          name="city"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.deliveryAddress.city?.length === 0"
+          >City is required</mat-hint
+        >
+      </div>
+    </mat-step>
+
+    <mat-step label="Billing address information">
+      <div class="form-control">
+        <label for="streetName">Street name</label>
+        <input
+          [(ngModel)]="registerDTO.billingAddress.streetName"
+          id="BstreetName"
+          type="text"
+          name="streetName"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.billingAddress.streetName?.length === 0"
+          >Street name is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="propertyNumber">Property number</label>
+        <input
+          [(ngModel)]="registerDTO.billingAddress.propertyNumber"
+          id="BpropertyNumber"
+          type="text"
+          name="propertyNumber"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.billingAddress.propertyNumber?.length === 0"
+          >Property number is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="streetName">Postal code</label>
+        <input
+          [(ngModel)]="registerDTO.billingAddress.postalCode"
+          id="BpostalCode"
+          type="text"
+          name="postalCode"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.billingAddress.postalCode?.length === 0"
+          >Postal code is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="streetName">Country</label>
+        <input
+          [(ngModel)]="registerDTO.billingAddress.country"
+          id="Bcountry"
+          type="text"
+          name="country"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.billingAddress.country?.length === 0"
+          >Country is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="streetName">County</label>
+        <input
+          [(ngModel)]="registerDTO.billingAddress.county"
+          id="Bcounty"
+          type="text"
+          name="county"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.billingAddress.county?.length === 0"
+          >County is required</mat-hint
+        >
+      </div>
+      <div class="form-control">
+        <label for="streetName">City</label>
+        <input
+          [(ngModel)]="registerDTO.billingAddress.city"
+          id="Bcity"
+          type="text"
+          name="city"
+        />
+        <mat-hint
+          class="hint-style"
+          style="color: red"
+          *ngIf="registerDTO.billingAddress.city?.length === 0"
+          >City is required</mat-hint
+        >
+      </div>
+    </mat-step>
+  </mat-stepper>
+  <a href="/login">
+    <h6 class="text-center">Already have an account? Click here!</h6>
+  </a>
+  <button type="submit">Register &#8594;</button>
+</form>
